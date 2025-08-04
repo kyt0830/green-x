@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { getAuth, signOut, updateProfile } from "firebase/auth";
 import { useNavigate } from "react-router";
 import { getStorage, ref, getDownloadURL, uploadBytes } from "firebase/storage";
@@ -43,7 +43,7 @@ const Profile = () => {
   console.log(user);
 
 
-  const getComments = async () => {
+  const getComments = useCallback(async () => {
 
     const q = query(collection(db, "comments"), where("uid", "==", user.uid), orderBy('date', "desc"));
     const querySnapshot = await getDocs(q);
@@ -53,18 +53,13 @@ const Profile = () => {
     }));
     setComments(commentsArray);
 
-  };
-
-
-
-
-
+  });
 
 
   useEffect(() => {
     getComments();
     console.log(comments);
-  }, [comments]);
+  }, [getComments, user.photoURL]);
 
 
 
