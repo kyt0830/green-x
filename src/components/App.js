@@ -1,5 +1,6 @@
 import Router from "./Router";
 import { useState } from "react";
+// eslint-disable-next-line react-hooks/exhaustive-deps
 import { authService } from '../firebase';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';

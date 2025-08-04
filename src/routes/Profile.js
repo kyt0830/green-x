@@ -64,7 +64,7 @@ const Profile = () => {
   useEffect(() => {
     getComments();
     console.log(comments);
-  }, []);
+  }, [comments]);
 
 
 
