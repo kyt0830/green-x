@@ -1,11 +1,30 @@
-
 h1{
-    text-align: center;
+  text-align: center;
 }
 .nav-link{
-    padding : 5px 10px;
-    border-radius: 5px;
+  padding: 10px;
+  border-radius:5px;
 }
-.active{
-    background-color : var(--bs-primary-bg-subtle);
+.nav-link.active{
+  background: var(--bs-primary-bg-subtle);
+}
+.profile{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap : 10px;
+  align-items: flex-start;
+}
+.profile img{
+  width : 100px;
+}
+
+.hidden{
+  display: none;
+}
+
+.profile .info{
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }

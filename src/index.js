@@ -4,9 +4,8 @@ import App from './components/App';
 // import { firebase } from './firebase';
 import { BrowserRouter } from "react-router";
 
+// console.log(firebase);
 
-
-console.log();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
