@@ -39,7 +39,7 @@ console.log(auth);
       :
       "초기화중..."
      }
-     
+     <p>copyright</p>
     </div>
   );
 }
