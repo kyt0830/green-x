@@ -53,7 +53,7 @@ const Profile = () => {
     }));
     setComments(commentsArray);
 
-  });
+  },[user.uid]);
 
 
   useEffect(() => {
